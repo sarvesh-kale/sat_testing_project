@@ -1,0 +1,12 @@
+c this is s_a_1 @ upper input of nor 
+c u v w x = 1 2 3 4 
+p cnf 4 8
+1 -2 0
+-1 2 0
+3 -4 0
+-3 4 0 
+c evrything after this is a test vector 
+1 2 3 4 0
+1 2 -3 -4 0
+-1 -2 -3 -4 0
+-1 -2 3 4 0

@@ -1,0 +1,12 @@
+c this is s_a_0 @ upper intermediate 
+c u v w x = 1 2 3 4 
+p cnf 4 7 
+-1 2 0
+1 -2 0 
+3 -4 0 
+-3 4 0 
+c everything below this is test vector 
+1 2 3 4 0 
+1 2 -3 -4 0
+-1 -2 -3 -4 0
+-1 -2 3 4 0 

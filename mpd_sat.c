@@ -4,6 +4,14 @@
 //second is nvars 
 //third  is nclauses 
 
+
+#define or(a,b)  a||b
+#define and(a,b) a&&b
+#define not(a)   !a
+#define one      T
+#define zero     F
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -32,7 +40,7 @@ int main(int argc ,char **argv)
 		exit(1);
 	}
 
-	printf("file opened successfully \n");	
+	//printf("file opened successfully \n");	
 	
 	while((read = getline(&line , &len ,fptr)) != -1 )// 
 	{
@@ -41,7 +49,7 @@ int main(int argc ,char **argv)
 		//len contains the length of line 
 		for(i=0 ; line[i] != '\0' ; i++) // loop condition is good 
 		{
-			
+				
 		}
 				
 	}

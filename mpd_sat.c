@@ -5,12 +5,12 @@
 //third  is nclauses 
 
 
-#define or(a,b)  a||b
-#define and(a,b) a&&b
-#define not(a)   !a
-#define one      T
-#define zero     F
-#define in(a)    a-'0'
+#define or(a,b)  (a||b)
+#define and(a,b) (a&&b)
+#define not(a)   (!a)
+#define one      true
+#define zero     false 
+#define in(a)    (a-'0')
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -48,25 +48,30 @@ int main(int argc ,char **argv)
 	
 	//i i loop variable  
 	n = 512 ; // 2**n ,max 9 variable possible 
-	for(int k=1;k<n && k<max;k++)
+        //for(int k=1;k<n && k<max;k++)
 	{
-		//initialize veryone to false ,those get overridden 
 		//
-		int counter = 1;
-		while(counter <= nvars){
-			var[counter] = false ;
-			counter++ ;
-		}
-		while((	read = getline(&line1,&len1,fptr2)) != -1)
+		int counter=1,set = 1;
+		counter = 1 ;
+		while((	read = getline(&line1,&len1,fptr2)) != -1 && (counter<=max-1)){
+			while(set <= nvars){
+			var[set] = false ;
+			//initialize everyone to false ,those get overridden 
+			set++ ;
+			}
 			for(int j=0;line1[j]!='\0';j++)
 			{
-				if(line1[j] == '1')
-					var[j+1]=true;
-				else if (line1[j] == '0') 
-					var[j+1]=false;
+				if(line1[j] == '1'){
+					var[j+1]=true;printf("var[%d]=%d,",j+1,one);			}
+				else if (line1[j] == '0'){ 
+					var[j+1]=false;printf("var[%d]=%d,",j+1,zero);  		}
+				else if (line1[j] == '\0' )
+					continue ;
 				//printf("here\n");
 			}
-				
+
+			printf("\n");
+		
 		fptr = fopen(argv[1],"r");
 		if(fptr == NULL ){
 			printf("failed to open the file !! \n");
@@ -95,7 +100,6 @@ int main(int argc ,char **argv)
 					i = i + 1 ;
 					continue ;
 				}
-				
 			}
 			cnf_expr = and(clause,cnf_expr);
 			//printf("I am here");	
@@ -104,8 +108,10 @@ int main(int argc ,char **argv)
 			printf("Sat\n");
 		else 
 			printf("Unsat\n");	
-		
+		counter = counter + 1 ;
 		fclose(fptr);
+		}		
+
 	}
 	fclose(fptr2);
 	return 0 ;

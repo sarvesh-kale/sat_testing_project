@@ -90,10 +90,12 @@ int main(int argc ,char **argv)
 				
 				if(line[i] == '-'){
 					clause = or(not(var[(int)(line[i+1] - '0')]),clause);
+					printf("%c%c ",line[i],line[i+1]);
 					i = i + 2;
 				}
-				else if((int)in(line[i])<=9 && line[i]!=' '){
+				else if((int)in(line[i])<=9 && line[i]!=' ' && line[i]!='0'){
 					clause = or(var[(int)(line[i] - '0')],clause) ;
+					printf("%c ",line[i]);
 					i = i + 1 ;
 				}
 				else if(line[i] == '0' || line[i] == ' '){
@@ -101,6 +103,7 @@ int main(int argc ,char **argv)
 					continue ;
 				}
 			}
+			printf("clause:%d\n",clause);
 			cnf_expr = and(clause,cnf_expr);
 			//printf("I am here");	
 		}

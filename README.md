@@ -8,7 +8,8 @@ Linux Environment with gcc installed .
 1.clone the repo 
 ```
 https://github.com/sarvesh-kale/sat_testing_project.git
-``` 
+```
+<!-- USAGE -->
 ## USAGE 
 
 1.this project accepts file input in dimacs format given here https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html

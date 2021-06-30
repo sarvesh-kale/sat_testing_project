@@ -17,7 +17,10 @@ https://github.com/sarvesh-kale/sat_testing_project.git
 
 2.This project will not produce correct output if the number of variables is greater than 9.
 
-3.the program takes three arguments ,first is cnf file ,second is number of varaibles ,third is number of clauses.
+3.copy paste the cnf file you want to execute in the cloned directory 
+
+4.the program takes three arguments ,first is cnf file ,second is number of varaibles ,third is number of clauses.</br>
+If the name of file is example.cnf then execute it using following -->
 
 ```
 ./doge_sat example.cnf 3 3 

@@ -22,5 +22,5 @@ https://github.com/sarvesh-kale/sat_testing_project.git
 ```
 ./doge_sat example.cnf 3 3 
 ```
-This will print all possible solutions to the terminal 
+This will print all possible solutions to the terminal <\br>
 It will print UNSAT if solution is not possible 

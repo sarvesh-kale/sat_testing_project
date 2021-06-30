@@ -1,5 +1,6 @@
 # SAT SOLVER 
-<img src="doge.jpeg" alt="doge logo"/>
+<img src="doge.jpeg" alt="doge logo" width="200" height="200"/>
+
 ## PREREQUISITES 
 Linux Environment with gcc installed .
 

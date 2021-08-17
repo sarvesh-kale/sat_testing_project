@@ -1,5 +1,4 @@
 # SAT SOLVER 
-<img src="doge.jpeg" alt="doge logo" width="300" height="200"/>
 
 ## PREREQUISITES 
 
@@ -24,7 +23,7 @@ https://github.com/sarvesh-kale/sat_testing_project.git
 If the name of file is example.cnf then execute it using following -->
 
 ```
-./doge_sat example.cnf 3 3 
+./sat example.cnf 3 3 
 ```
 This will print all possible solutions to the terminal </br>
 It will print UNSAT if solution is not possible .

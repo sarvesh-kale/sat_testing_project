@@ -23,7 +23,7 @@ https://github.com/sarvesh-kale/sat_testing_project.git
 If the name of file is example.cnf then execute it using following -->
 
 ```
-This will print all possible solutions to the terminal </br>
+This will print all possible solutions to the terminal 
 
 $ ./sat example.cnf 3 3 
  1 -2 -3 

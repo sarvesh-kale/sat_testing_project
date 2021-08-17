@@ -23,7 +23,15 @@ https://github.com/sarvesh-kale/sat_testing_project.git
 If the name of file is example.cnf then execute it using following -->
 
 ```
-./sat example.cnf 3 3 
-```
 This will print all possible solutions to the terminal </br>
+
+$ ./sat example.cnf 3 3 
+ 1 -2 -3 
+-1 -2  3 
+ 1 -2  3 
+-1  2  3 
+SAT
+```
+The first line says that when variable 1 is true , 2 is false and 3 is false then all </br>
+CNF expressions written in example.cnf evaluates to true therefore SAT is printed .
 It will print UNSAT if solution is not possible .
